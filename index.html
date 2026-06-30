@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>All In Advertising Client Mockups</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #171719;
+        --muted: #5e6368;
+        --line: #dedede;
+        --panel: #f6f6f6;
+        --accent: #ce2030;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      main {
+        width: min(100% - 40px, 980px);
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(32px, 4vw, 52px);
+        line-height: 1.05;
+      }
+
+      .lede {
+        max-width: 680px;
+        margin: 0 0 36px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .mockup-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .mockup-link {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 20px;
+        align-items: center;
+        padding: 18px 20px;
+        color: inherit;
+        text-decoration: none;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .mockup-link strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 18px;
+      }
+
+      .mockup-link span {
+        color: var(--muted);
+      }
+
+      .mockup-link em {
+        color: var(--accent);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      @media (max-width: 640px) {
+        .mockup-link {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Client Mockups</h1>
+      <p class="lede">Static previews for client-facing page concepts, layouts, and implementation mockups.</p>
+
+      <section class="mockup-list" aria-label="Available mockups">
+        <a class="mockup-link" href="./godfrey-group/godfrey-backlit-trade-show-displays-mockup.html">
+          <span>
+            <strong>Godfrey Group</strong>
+            Backlit Trade Show Displays collection mockup
+          </span>
+          <em>Open</em>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

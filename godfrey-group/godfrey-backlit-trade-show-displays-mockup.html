@@ -1,0 +1,549 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Backlit Trade Show Displays | Godfrey Group Mockup</title>
+    <meta name="description" content="Mockup for a new indexable Godfrey Group Backlit Trade Show Displays collection page.">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://www.godfreygroup.com/collections/backlit-trade-show-displays">
+    <link rel="icon" href="https://www.godfreygroup.com/cdn/shop/files/godfrey-favicon.png?crop=center&height=48&v=1730392991&width=48" type="image/png">
+    <link rel="preload" href="https://www.godfreygroup.com/cdn/shop/t/66/assets/main.css?v=123462372422876302611782484018" as="style">
+    <link rel="stylesheet" href="https://www.godfreygroup.com/cdn/shop/t/66/assets/main.css?v=123462372422876302611782484018">
+    <script src="https://www.godfreygroup.com/cdn/shop/t/66/assets/main.js?v=76476094356780495751782484018" defer></script>
+    <style>
+      :root {
+        --mock-red: #ce2030;
+        --mock-ink: #171719;
+        --mock-muted: #5f6266;
+        --mock-line: #e3e3e3;
+        --mock-panel: #f5f5f5;
+      }
+
+      body {
+        margin: 0;
+        color: var(--mock-ink);
+        background: #fff;
+        font-family: Muli, Arial, sans-serif;
+      }
+
+      .mock-bar {
+        background: #171719;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .mock-container {
+        width: min(100% - 40px, 1480px);
+        margin: 0 auto;
+      }
+
+      .mock-bar .mock-container,
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .mock-bar .mock-container {
+        min-height: 38px;
+      }
+
+      .site-header {
+        min-height: 92px;
+        border-bottom: 1px solid var(--mock-line);
+      }
+
+      .site-logo {
+        width: 210px;
+        height: auto;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-family: "Nunito Sans", Muli, Arial, sans-serif;
+        font-weight: 700;
+      }
+
+      .site-nav a,
+      .quick-links a,
+      .mock-card a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .hero {
+        background: linear-gradient(110deg, #111 0%, #2d3438 52%, #495d63 100%);
+        color: #fff;
+        padding: 58px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 42px;
+        align-items: center;
+      }
+
+      .breadcrumbs {
+        font-size: 14px;
+        margin-bottom: 18px;
+        color: rgba(255,255,255,.78);
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-family: Figtree, Arial, sans-serif;
+        font-size: clamp(38px, 4vw, 64px);
+        line-height: 1.02;
+      }
+
+      .hero p {
+        max-width: 760px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .hero-panel {
+        border: 1px solid rgba(255,255,255,.22);
+        background: rgba(255,255,255,.08);
+        padding: 24px;
+      }
+
+      .hero-panel strong {
+        display: block;
+        font-family: Figtree, Arial, sans-serif;
+        font-size: 28px;
+        line-height: 1;
+      }
+
+      .hero-panel span {
+        display: block;
+        margin-top: 8px;
+        color: rgba(255,255,255,.8);
+      }
+
+      .section {
+        padding: 44px 0;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 420px;
+        gap: 40px;
+        align-items: start;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-family: Figtree, Arial, sans-serif;
+        font-size: clamp(26px, 2.2vw, 38px);
+        line-height: 1.12;
+      }
+
+      .intro-copy p,
+      .note-band p {
+        margin: 0 0 16px;
+        color: #333;
+        line-height: 1.65;
+      }
+
+      .quick-links {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+        border: 1px solid var(--mock-line);
+        background: var(--mock-panel);
+      }
+
+      .quick-links a {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 13px 14px;
+        background: #fff;
+        border: 1px solid var(--mock-line);
+        font-weight: 700;
+      }
+
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .filter-chip {
+        border: 1px solid #cfcfcf;
+        background: #fff;
+        color: var(--mock-ink);
+        padding: 10px 14px;
+        font: 700 14px/1 "Nunito Sans", Muli, Arial, sans-serif;
+        cursor: pointer;
+      }
+
+      .filter-chip[aria-pressed="true"] {
+        background: var(--mock-red);
+        color: #fff;
+        border-color: var(--mock-red);
+      }
+
+      .collection-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-top: 1px solid var(--mock-line);
+        border-bottom: 1px solid var(--mock-line);
+        padding: 18px 0;
+        margin-bottom: 28px;
+      }
+
+      .collection-toolbar p {
+        margin: 0;
+        color: var(--mock-muted);
+      }
+
+      .mock-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px 20px;
+      }
+
+      .mock-card {
+        min-width: 0;
+      }
+
+      .mock-card__image {
+        display: block;
+        aspect-ratio: 1 / 1;
+        background: #f7f7f7;
+        border: 1px solid #ececec;
+        overflow: hidden;
+      }
+
+      .mock-card__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        mix-blend-mode: multiply;
+      }
+
+      .mock-card__meta {
+        padding-top: 12px;
+      }
+
+      .mock-card__meta h3 {
+        margin: 0 0 8px;
+        font-family: Figtree, Arial, sans-serif;
+        font-size: 17px;
+        line-height: 1.28;
+      }
+
+      .price {
+        color: var(--mock-red);
+        font-weight: 700;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 9px;
+        background: #f2f2f2;
+        color: #555;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .note-band {
+        background: #f2f2f2;
+        border-top: 1px solid var(--mock-line);
+        border-bottom: 1px solid var(--mock-line);
+      }
+
+      .note-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .note-grid h3 {
+        margin: 0 0 10px;
+        font-family: Figtree, Arial, sans-serif;
+        font-size: 20px;
+      }
+
+      .footer-mock {
+        padding: 36px 0;
+        background: #171719;
+        color: #fff;
+      }
+
+      @media (max-width: 1024px) {
+        .hero-grid,
+        .intro-grid,
+        .note-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .mock-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .site-header,
+        .mock-bar .mock-container,
+        .collection-toolbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .site-nav {
+          flex-wrap: wrap;
+          gap: 14px;
+        }
+
+        .hero {
+          padding: 40px 0;
+        }
+
+        .mock-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 22px 14px;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .mock-container {
+          width: min(100% - 28px, 1480px);
+        }
+
+        .mock-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mock-bar">
+      <div class="mock-container">
+        <span>Free design services with every order</span>
+        <span>Questions? Call: (800) 789-9394</span>
+      </div>
+    </div>
+
+    <header class="mock-container site-header">
+      <a href="https://www.godfreygroup.com/">
+        <img class="site-logo" src="https://www.godfreygroup.com/cdn/shop/files/godfrey-group-logo.svg?v=1730388661&width=500" alt="Godfrey Group">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="https://www.godfreygroup.com/collections/8x10-trade-show-booths-displays">8' x 10'</a>
+        <a href="https://www.godfreygroup.com/collections/10x10-trade-show-booths-displays">10' x 10'</a>
+        <a href="https://www.godfreygroup.com/collections/10x20-trade-show-booths-displays">10' x 20'</a>
+        <a href="https://www.godfreygroup.com/collections/custom-trade-show-booths-displays">Custom</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="mock-container hero-grid">
+          <div>
+            <div class="breadcrumbs">Home / Trade Show Displays / Backlit Trade Show Displays</div>
+            <h1>Backlit Trade Show Displays</h1>
+            <p>
+              Shop illuminated trade show displays across 8' x 10', 10' x 10', and 10' x 20' booth sizes.
+              This indexable parent collection gives shoppers one destination for LED light boxes, backlit
+              fabric displays, modular backlit kits, shelf displays, monitor mount options, and larger exhibit systems.
+            </p>
+          </div>
+          <aside class="hero-panel" aria-label="Collection summary">
+            <strong>66</strong>
+            <span>Backlit products consolidated from live 8x10, 10x10, and 10x20 collections.</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="mock-container intro-grid">
+          <div class="intro-copy">
+            <h2>One SEO landing page for the broader backlit intent</h2>
+            <p>
+              This page keeps the client's existing size-first navigation intact while creating a stronger indexed
+              destination for shoppers searching broadly for backlit trade show displays. Size-specific pages can
+              remain useful for navigation and filtering, while this parent page owns the main keyword target.
+            </p>
+            <p>
+              The page can be linked from the homepage, trade show display copy, footer links, and relevant collection
+              descriptions without changing the current menu behavior.
+            </p>
+            <div class="filters" aria-label="Mock product filters">
+              <button class="filter-chip" type="button" aria-pressed="true" data-filter="all">All Backlit</button>
+              <button class="filter-chip" type="button" aria-pressed="false" data-filter="8-x-10-backlit-displays">8' x 10'</button>
+              <button class="filter-chip" type="button" aria-pressed="false" data-filter="10-x-10-backlit-displays">10' x 10'</button>
+              <button class="filter-chip" type="button" aria-pressed="false" data-filter="10-x-20-backlit-displays">10' x 20'</button>
+            </div>
+          </div>
+          <aside class="quick-links" aria-label="Related collections">
+            <a href="https://www.godfreygroup.com/collections/8-x-10-backlit-displays"><span>8' x 10' Backlit Displays</span><span>View</span></a>
+            <a href="https://www.godfreygroup.com/collections/10-x-10-backlit-displays"><span>10' x 10' Backlit Displays</span><span>View</span></a>
+            <a href="https://www.godfreygroup.com/collections/10-x-20-backlit-displays"><span>10' x 20' Backlit Displays</span><span>View</span></a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="mock-container">
+          <div class="collection-toolbar">
+            <h2>Shop Backlit Trade Show Displays</h2>
+            <p><span id="product-count">66</span> products shown</p>
+          </div>
+          <div id="product-grid" class="mock-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section note-band">
+        <div class="mock-container note-grid">
+          <div>
+            <h3>Indexing</h3>
+            <p>Proposed live page should be indexable and self-canonical at /collections/backlit-trade-show-displays.</p>
+          </div>
+          <div>
+            <h3>Internal Links</h3>
+            <p>Add links from the homepage, trade show display pages, footer, and existing filtered collection copy.</p>
+          </div>
+          <div>
+            <h3>Filtered Pages</h3>
+            <p>Keep size-specific backlit pages for UX. If they stay noindex, prefer noindex, follow instead of noindex, nofollow.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-mock">
+      <div class="mock-container">
+        <strong>Godfrey Group</strong>
+        <p>This mockup uses live Godfrey Group theme assets and live product data captured from the current collection JSON endpoints.</p>
+      </div>
+    </footer>
+
+    <script>
+      const products = [
+        { title: "10' Backlit Display With Storage Closet", handle: "10-backlit-display-with-one-or-two-storage-closets", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10_backlitdisplaywithstoragecloset.jpg?v=1772822722", price: "7975.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit Fabric Pop Up Trade Show Display - Straight Wall", handle: "10-backlit-fabric-pop-up-straight-wall-psw-10", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/backlit_pop_up.jpg?v=1537287942", price: "3245.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit OutRigger II Trade Show Shelf Display", handle: "10-backlit-outrigger-ii-shelf-display", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_singleshelfoutriggerdisplay.png?v=1678294040", price: "5330.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit OutRigger II Trade Show Shelf Display With 3 Sections", handle: "10-backlit-outrigger-ii-shelf-display-with-3-shelf-sections", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_outriggerwithflatshelves.jpg?v=1678294808", price: "6740.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit OutRigger II Trade Show Shelf Display With Monitor Mount", handle: "10-outrigger-shelf-display-with-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_Displaywithmonitormountandshelves.png?v=1678289465", price: "6690.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit Pop Up Trade Show Display With Single Piece Graphic", handle: "10-pop-up-display-with-single-piece-graphic", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_backlit_pop_up_trade_show_display.jpg?v=1553942332", price: "3446.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit Shelf Display With Two Lightboxes", handle: "10-backlit-shelf-display-with-two-lightboxes", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10x10shelfdisplay.jpg?v=1771354816", price: "5280.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit Trade Show Display", handle: "10-backlit-display-lt-10", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10_wx8_hlightbox.jpg?v=1713961884", price: "3148.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Backlit Trade Show Display - Tool-Less Setup", handle: "10-backlit-display-tool-less-setup-ltprm-10", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_backlit-1.jpg?v=1547507084", price: "4880.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Curved Light Box Trade Show Display", handle: "10-curved-light-box", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10_curvedlightbox.jpg?v=1764970672", price: "3238.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Economy Backlit Fabric Pop Up Trade Show Display - Straight Wall", handle: "10-economy-backlit-fabric-pop-up-straight-wall", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_EconomyBacklitDisplay.jpg?v=1674683989", price: "2083.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Freestanding Light Box Trade Show Display With Monitor Mount", handle: "10-freestanding-light-box-with-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10ftlightboxwithmonitormount.jpg?v=1713961727", price: "3398.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Light Box Trade Show Display With Rounded Corners", handle: "10-light-box-with-rounded-corners", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/lightboxwithroundedcorners.jpg?v=1764972265", price: "3238.00", source: "10-x-10-backlit-displays" },
+        { title: "10' OutRigger Trade Show Merchandise Display - Adjustable For Shelves & Hooks", handle: "10-outrigger-iii-shelf-display-adjustable-for-shelves-hooks-etc", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/ScreenShot2024-03-07at1.36.54PM.png?v=1709841192", price: "7928.00", source: "10-x-10-backlit-displays" },
+        { title: "10' Trade Show Display with Center Light Box, Monitor Mount & Slat Panels", handle: "10-display-with-center-light-box-optional-monitor-mount-and-slat-panels-for-product-display", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/a_a783db7e-7649-435c-8c78-54906b7597df.jpg?v=1739555721", price: "4350.00", source: "10-x-10-backlit-displays" },
+        { title: "10x10 Modular Backlit Trade Show Display with Shelving Module", handle: "backlit-10x10-kit-with-shelving-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-F_731b1a5f-e2b7-43fa-afa6-685ad639b2d6.jpg?v=1710246227", price: "3729.00", source: "10-x-10-backlit-displays" },
+        { title: "10x20 Light Box Trade Show Display With Storage Area", handle: "10x20-light-box-exhibit-with-storage-area", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10x20exhibitkitwithstorage.jpg?v=1757617238", price: "9480.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Backlit Display With One or Two Storage Closets", handle: "20-backlit-display-with-one-or-two-storage-closets", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10x20withstoragecloset.jpg?v=1772993779", price: "11485.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Backlit Fabric Pop Up Straight Wall Trade Show Display", handle: "20-backlit-fabric-pop-up-straight-wall", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/20_backlit_1024x1024_2_1024x1024_c2c4651f-bd30-453a-a478-dc3cc1746ca0.jpg?v=1577279474", price: "7219.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Backlit Modular Trade Show Display With Backlit Counter", handle: "20-backlit-modular-display-with-backlit-counter", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/20_ModularBacklitDisplay_1.jpg?v=1672513327", price: "7022.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Backlit Modular Trade Show Display With Monitor Mount and Backlit Counter", handle: "20-backlit-modular-display-with-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/20footlightboxwithmonitor.png?v=1672509350", price: "6252.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Backlit OutRigger II Trade Show Display With Shelf and Monitor Mount", handle: "20-backlit-outrigger-ii-shelf-display-with-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/20_tradeshowdisplaywithshelves.png?v=1678308185", price: "11860.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Backlit OutRigger II Trade Show Display With Shelves", handle: "20-backlit-outrigger-ii-shelf-display", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10x20tradeshowdisplaywithslantedshelves.png?v=1678369129", price: "12325.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Backlit Trade Show Display - Optional Monitor Mount", handle: "20-backlit-display", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/20_wlightboxexhibit.jpg?v=1713962042", price: "6578.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Modular Light Box Trade Show Display", handle: "20-modular-light-box-exhibit", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/TF-BE-20.jpg?v=1543803654", price: "11923.00", source: "10-x-20-backlit-displays" },
+        { title: "20' OutRigger Merchandise Trade Show Display - Adjustable Hooks", handle: "20-outrigger-merchandise-display-adjustable-for-shelves-hooks-etc", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/ScreenShot2024-03-07at1.39.16PM.png?v=1719316506", price: "13448.00", source: "10-x-20-backlit-displays" },
+        { title: "20' S Curve Light Box Trade Show Display", handle: "20-s-curve-light-box", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/20_curvedlightbox.jpg?v=1765034976", price: "5322.00", source: "10-x-20-backlit-displays" },
+        { title: "20' S Curved & Tapered Lightbox Trade Show Display", handle: "20-s-curved-tapered-lightbox", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/20_lightbox.jpg?v=1765305894", price: "5322.00", source: "10-x-20-backlit-displays" },
+        { title: "20' Tension Fabric Trade Show Display With Backlit Center Module", handle: "20-tension-fabric-exhibit-with-backlit-center-module", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/tfab-4_2_1024x1024_dabc0621-fdd6-4b2d-89d2-198ec4170459.jpg?v=1577279470", price: "6860.00", source: "10-x-20-backlit-displays" },
+        { title: "8' Backlit Fabric Pop Up Straight Wall Trade Show Display", handle: "8-backlit-fabric-pop-up-straight-wall-psw-88", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/psw-88.jpg?v=1543805366", price: "2698.00", source: "8-x-10-backlit-displays" },
+        { title: "8' Backlit Pop Up Trade Show Display With Single Piece Graphic", handle: "8-pop-up-display-with-single-piece-graphic", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/8_backlit_display.jpg?v=1553942329", price: "2615.00", source: "8-x-10-backlit-displays" },
+        { title: "8' Economy Backlit Fabric Pop Up Straight Wall Trade Show Display", handle: "8-economy-backlit-fabric-pop-up-straight-wall", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/8_EconomyBacklitPopUpTradeShowDisplay.jpg?v=1674684315", price: "1624.00", source: "8-x-10-backlit-displays" },
+        { title: "8' x 8' Backlit Freestanding Trade Show Display", handle: "8-x-8-backlit-freestanding-display-lt-88", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/LT-88_Backlit3-1.jpg?v=1577128986", price: "2966.00", source: "8-x-10-backlit-displays" },
+        { title: "Backlit 10x10 Trade Show Display Kit - Optional Monitor Mount(s)", handle: "copy-of-backlit-10x10-kit-with-shelving-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-JVJ.jpg?v=1710343433", price: "6248.00", source: "10-x-10-backlit-displays" },
+        { title: "Backlit Fabric Light Boxes for Trade Show Displays", handle: "backlit-fabric-light-boxes", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/Fabric_Light_Box.jpg?v=1577129048", price: "896.00", source: "8-x-10-backlit-displays" },
+        { title: "Backlit Trade Show Display with Dual Side Walls", handle: "backlit-10x10-display-with-sidewalls", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/backlit_10_with_side_walls.png?v=1577279417", price: "3545.00", source: "10-x-10-backlit-displays" },
+        { title: "Four Piece Modular Backlit 10x20 Kit - Optional Monitor Mount(s)", handle: "four-piece-modular-backlit-10x20-kit-optional-monitor-mounts", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-JNNJ.jpg?v=1712325993", price: "7964.00", source: "10-x-20-backlit-displays" },
+        { title: "Freestanding Light Box Exhibit With Monitor Mount", handle: "freestanding-light-box-exhibit-with-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/double_light_box_display_with_monitor_mount.jpg?v=1544548931", price: "7480.00", source: "10-x-10-backlit-displays" },
+        { title: "Freestanding Light Box With Monitor Mount", handle: "freestanding-light-box-with-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/FSLBWM-1.jpg?v=1547507094", price: "3236.00", source: "8-x-10-backlit-displays" },
+        { title: "LIGHT BOX MODULE", handle: "light-tube-backlit-ultra-thin-backwalls", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/lt-1_1024x1024_211821a5-c5cb-4e09-8ba2-a28a105de9cb.jpg?v=1577279424", price: "2787.00", source: "8-x-10-backlit-displays" },
+        { title: "Light Box Module - 8' x 8'", handle: "light-box-module-8-x-8", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/8x8LightBox.png?v=1642695247", price: "2184.00", source: "8-x-10-backlit-displays" },
+        { title: "Light Box Trade Show Display Module - 10' x 8'", handle: "light-box-module-10-x-8", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_wx8_hLightBox.png?v=1642695566", price: "2854.00", source: "10-x-10-backlit-displays" },
+        { title: "Light Box Trade Show Display Module - 10' x 8' - With Header", handle: "light-box-module-10-x-8-with-header", image: "https://cdn.shopify.com/s/files/1/1321/1851/products/10_LightBoxWithBridgeHeader.png?v=1642695962", price: "4936.00", source: "10-x-10-backlit-displays" },
+        { title: "Modular Backlit 10x10 Trade Show Display Kit - Optional Monitor Mount(s)", handle: "modular-backlit-10x10-kit-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-EK.jpg?v=1710195110", price: "4570.00", source: "10-x-10-backlit-displays" },
+        { title: "Modular Backlit 10x10 Trade Show Display Kit With One Slanted Panel", handle: "modular-backlit-10x10-kit-optional-monitor-mount-1", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-KA.jpg?v=1710521683", price: "4690.00", source: "10-x-10-backlit-displays" },
+        { title: "Modular Backlit 10x10 Trade Show Display Kit With Shelving - Optional Monitor Mount(s)", handle: "module-backlit-10x10-kit-with-shelving-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-M_6e5d333a-eb4c-4059-9fb9-8eadfe88bccb.jpg?v=1711199979", price: "4763.00", source: "10-x-10-backlit-displays" },
+        { title: "Modular Backlit 10x10 Trade Show Display Kit With Slanted Tops - Optional Monitor Mount(s)", handle: "modular-backlit-10x10-kit-with-slanted-tops-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/Backlit10x10KitA_149eeceb-4d6a-49ca-aea6-4c6cc2ee2b80.jpg?v=1710193727", price: "4760.00", source: "10-x-10-backlit-displays" },
+        { title: "Modular Backlit 10x10 Trade Show Display Kit With Two Shelving Fixtures", handle: "modular-backlit-10x10-kit-with-two-shelving-fixtures", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-EE_effce612-fe0b-4060-9cb2-b3fb1aa5cd41.jpg?v=1715869408", price: "5852.00", source: "10-x-10-backlit-displays" },
+        { title: "Modular Backlit 10x20 Kit - Optional Monitor Mount", handle: "modular-backlit-10x20-kit-optional-monitor-mount-1", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-FA2_68c2ff88-36c5-4e3c-b705-dbfe4c8b58e0.jpg?v=1712257821", price: "6295.00", source: "10-x-20-backlit-displays" },
+        { title: "Modular Backlit 10x20 Kit - Optional Monitor Mount(s)", handle: "modular-backlit-10x20-kit-optional-monitor-mounts", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-NA2N_2676f780-91a5-4170-8c09-432405d6af6a.jpg?v=1712281322", price: "8266.00", source: "10-x-20-backlit-displays" },
+        { title: "Modular Backlit 10x20 Kit - Optional Monitor Mount(s)", handle: "modular-backlit-10x20-kit-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-EVE.jpg?v=1711314264", price: "7678.00", source: "10-x-20-backlit-displays" },
+        { title: "Modular Backlit 10x20 Kit With Shelving - Optional Monitor Mount(s)", handle: "modular-backlit-10x20-kit-with-shelving-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-FV_2.jpg?v=1712280263", price: "6952.00", source: "10-x-20-backlit-displays" },
+        { title: "Modular Backlit 10x20 Kit With Slanted Tops - Optional Monitor Mount(s)", handle: "modular-backlit-10x20-kit-with-slanted-tops-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-AFA.jpg?v=1711313549", price: "7915.00", source: "10-x-20-backlit-displays" },
+        { title: "Modular Backlit 10x20 Kit With Wedge Shaped Center - Optional Monitor Mount(s)", handle: "modular-backlit-10x20-kit-with-wedge-shaped-center-optional-monitor-mounts", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-MKKM_bc71cbd3-e118-4bbb-8395-e98a43d0d6de.jpg?v=1712340972", price: "9845.00", source: "10-x-20-backlit-displays" },
+        { title: "Shelf Display for 10' Booth - Backlighting Optional", handle: "shelf-display-for-10-booth-backligting-optional", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10_tradeshowshelfdisplay.jpg?v=1744908259", price: "4350.00", source: "10-x-10-backlit-displays" },
+        { title: "Shelf Display for 10'x20' Booth - Backlighting Optional", handle: "shelf-display-for-10x20-booth-backlighting-optional", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/20_tradeshowproductdisplay.png?v=1745328215", price: "7480.00", source: "10-x-20-backlit-displays" },
+        { title: "Shelf Display for 10'x20' Booth - Two Shelf Modules - Backlighting Optional", handle: "shelf-display-for-10x20-booth-two-shelf-modules-backlighting-optional", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/20_tradeshowshelfdisplay.png?v=1745329853", price: "6960.00", source: "10-x-20-backlit-displays" },
+        { title: "Slat Panel Display With Center Light Box (Optional Monitor Mount)", handle: "slat-panel-display-with-center-light-box", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10x20Slatwallpaneldisplay.png?v=1739817992", price: "6935.00", source: "10-x-20-backlit-displays" },
+        { title: "Slat Panel Display With Lightbox Center Section", handle: "slat-panel-display-with-lightbox-center-section", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/10x10slatwallpaneldisplay.png?v=1739817856", price: "3190.00", source: "10-x-10-backlit-displays" },
+        { title: "Slat Panel Display With Lightbox Modules", handle: "slat-panel-display-with-lightbox-modules", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/3_ebf2fb9d-92d6-4135-854f-53adb823700c.jpg?v=1739558664", price: "7280.00", source: "10-x-20-backlit-displays" },
+        { title: "Slatwall Panel Display With Lightbox Center Section", handle: "slatwall-panel-display-with-lightbox-center-section", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/w1-2.jpg?v=1725489474", price: "3980.00", source: "10-x-10-backlit-displays" },
+        { title: "Tapered Shape Backlit 10x10 Trade Show Display", handle: "tapered-shape-backlit-10x10", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-A2_d9dff879-d15a-41b2-8480-c2ea409beaf2.jpg?v=1713374091", price: "3230.00", source: "10-x-10-backlit-displays" },
+        { title: "Three Section Modular Backlit 10x10 Trade Show Display Kit - Optional Monitor Mount(s)", handle: "three-section-modular-backlit-10x10-kit-optional-monitor-mount", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1010-DJD_cb9b1bcb-b5fb-4722-81a3-4d1cdc8e0ae9.jpg?v=1710247471", price: "4130.00", source: "10-x-10-backlit-displays" },
+        { title: "Three Section Modular Backlit 10x20 Kit - Optional Monitor Mount(s)", handle: "three-section-modular-backlit-10x20-kit-optional-monitor-mounts-1", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-PJP.jpg?v=1713370296", price: "7190.00", source: "10-x-20-backlit-displays" },
+        { title: "Three Section Modular Backlit 10x20 Kit - Optional Monitor Mount(s)", handle: "three-section-modular-backlit-10x20-kit-optional-monitor-mounts", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-NMN_4bef44d7-479b-4107-9203-c2e11c56fcd8.jpg?v=1712341910", price: "7680.00", source: "10-x-20-backlit-displays" },
+        { title: "U-Shaped Backlit 10x20 Kit - Optional Monitor Mount(s)", handle: "u-shaped-backlit-10x20-kit-optional-monitor-mounts", image: "https://cdn.shopify.com/s/files/1/1321/1851/files/BLKT-1020-JWJ_688b221e-9d21-4f16-80c3-e4fc4f599274.jpg?v=1712330313", price: "9856.00", source: "10-x-20-backlit-displays" }
+      ];
+
+      const grid = document.querySelector("#product-grid");
+      const count = document.querySelector("#product-count");
+      const chips = [...document.querySelectorAll(".filter-chip")];
+
+      function sizeLabel(source) {
+        if (source === "8-x-10-backlit-displays") return "8' x 10'";
+        if (source === "10-x-10-backlit-displays") return "10' x 10'";
+        if (source === "10-x-20-backlit-displays") return "10' x 20'";
+        return "Backlit";
+      }
+
+      function money(value) {
+        return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(Number(value));
+      }
+
+      function render(filter = "all") {
+        const visible = filter === "all" ? products : products.filter((product) => product.source === filter);
+        count.textContent = visible.length;
+        grid.innerHTML = visible.map((product) => `
+          <article class="mock-card" data-source="${product.source}">
+            <a class="mock-card__image" href="https://www.godfreygroup.com/products/${product.handle}">
+              <img src="${product.image}" alt="${product.title}" loading="lazy">
+            </a>
+            <div class="mock-card__meta">
+              <h3><a href="https://www.godfreygroup.com/products/${product.handle}">${product.title}</a></h3>
+              <div class="price">From ${money(product.price)}</div>
+              <span class="tag">${sizeLabel(product.source)}</span>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          chips.forEach((item) => item.setAttribute("aria-pressed", "false"));
+          chip.setAttribute("aria-pressed", "true");
+          render(chip.dataset.filter);
+        });
+      });
+
+      render();
+    </script>
+  </body>
+</html>
