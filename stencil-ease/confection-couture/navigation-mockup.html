@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confection Couture Navigation Mockup</title>
+  <link rel="preconnect" href="https://confectioncouturestencils.com">
+  <link rel="preconnect" href="https://cdn.shopify.com">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/base.css?v=134959596066851819461680207147">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/custom.css?v=41328491067596565651777989094">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/component-list-menu.css?v=151968516119678728991680207147">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/component-menu-drawer.css?v=182311192829367774911680207147">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/component-mega-menu.css?v=177496590996265276461680207147">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/component-search.css?v=96455689198851321781680207147">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/section-image-banner.css?v=170916557215809668651680207147">
+  <link rel="stylesheet" href="https://confectioncouturestencils.com/cdn/shop/t/119/assets/component-card.css?v=13116108056750117421680207147">
+  <style>
+    :root {
+      --cc-pink: #fef3f3;
+      --cc-ink: #191919;
+      --cc-muted: #626262;
+      --cc-border: #e7dede;
+      --cc-accent: #b45f74;
+      --cc-soft: #fff8f8;
+      --cc-green: #2d6d58;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--cc-ink);
+      font-family: Assistant, Arial, sans-serif;
+      background: #fff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .mockup-note {
+      background: #202020;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: .02em;
+      padding: 8px 18px;
+      text-align: center;
+    }
+
+    .announcement-bar {
+      background: var(--cc-pink);
+      color: #6a6a6a;
+      font-size: 13px;
+      padding: 10px 16px;
+      text-align: center;
+    }
+
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--cc-border);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+    }
+
+    .header-inner {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 18px;
+      margin: 0 auto;
+      max-width: 1240px;
+      padding: 18px 24px 10px;
+    }
+
+    .header-tools,
+    .header-actions {
+      align-items: center;
+      display: flex;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .header-actions {
+      justify-content: flex-end;
+    }
+
+    .icon-link {
+      align-items: center;
+      color: #222;
+      display: inline-flex;
+      font-size: 13px;
+      gap: 6px;
+      min-height: 36px;
+      white-space: nowrap;
+    }
+
+    .icon-link svg {
+      height: 19px;
+      width: 19px;
+    }
+
+    .brand-logo {
+      display: block;
+      margin: 0 auto;
+      max-width: min(360px, 48vw);
+    }
+
+    .brand-logo img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .nav-wrap {
+      border-top: 1px solid #f0e7e7;
+    }
+
+    .primary-nav {
+      align-items: stretch;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1240px;
+      padding: 0 18px;
+    }
+
+    .nav-item {
+      position: static;
+    }
+
+    .nav-trigger,
+    .nav-link {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      color: #242424;
+      cursor: pointer;
+      display: inline-flex;
+      font: inherit;
+      font-size: 14px;
+      gap: 7px;
+      letter-spacing: .03em;
+      min-height: 48px;
+      padding: 0 14px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-trigger svg {
+      height: 13px;
+      transition: transform .16s ease;
+      width: 13px;
+    }
+
+    .nav-item:hover .nav-trigger,
+    .nav-item.is-open .nav-trigger,
+    .nav-link:hover {
+      color: var(--cc-accent);
+    }
+
+    .nav-item.is-open .nav-trigger svg {
+      transform: rotate(180deg);
+    }
+
+    .mega-panel {
+      background: #fff;
+      border-bottom: 1px solid var(--cc-border);
+      border-top: 1px solid var(--cc-border);
+      box-shadow: 0 18px 30px rgba(0,0,0,.08);
+      display: none;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      z-index: 25;
+    }
+
+    .nav-item.is-open .mega-panel {
+      display: block;
+    }
+
+    .mega-inner {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: minmax(180px, .82fr) repeat(3, minmax(160px, 1fr));
+      margin: 0 auto;
+      max-width: 1240px;
+      padding: 26px 24px 30px;
+    }
+
+    .mega-feature {
+      background: var(--cc-soft);
+      border: 1px solid var(--cc-border);
+      border-radius: 6px;
+      padding: 18px;
+    }
+
+    .mega-feature strong {
+      display: block;
+      font-size: 17px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .mega-feature p,
+    .mega-column p {
+      color: var(--cc-muted);
+      font-size: 13px;
+      line-height: 1.45;
+      margin: 0 0 12px;
+    }
+
+    .evidence-pill {
+      background: #fff;
+      border: 1px solid var(--cc-border);
+      border-radius: 999px;
+      color: var(--cc-green);
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+    }
+
+    .mega-column h3 {
+      color: var(--cc-accent);
+      font-size: 13px;
+      letter-spacing: .08em;
+      margin: 0 0 11px;
+      text-transform: uppercase;
+    }
+
+    .mega-list {
+      display: grid;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mega-list a {
+      align-items: baseline;
+      color: #222;
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      line-height: 1.25;
+      padding: 2px 0;
+    }
+
+    .mega-list a:hover {
+      color: var(--cc-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .metric {
+      color: var(--cc-muted);
+      flex: 0 0 auto;
+      font-size: 11px;
+    }
+
+    .cta-link {
+      align-items: center;
+      border-bottom: 1px solid currentColor;
+      color: var(--cc-accent);
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 700;
+      gap: 6px;
+      padding-bottom: 2px;
+    }
+
+    .mobile-toggle {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      display: none;
+      height: 38px;
+      justify-content: center;
+      padding: 0;
+      width: 38px;
+    }
+
+    .mobile-toggle svg {
+      height: 24px;
+      width: 24px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.82) 42%, rgba(255,255,255,.18) 100%),
+        url("https://confectioncouturestencils.com/cdn/shop/files/AdobeStock_540461086.jpg?v=1781615619&width=1500") center right / cover no-repeat;
+      min-height: 470px;
+    }
+
+    .hero-inner {
+      margin: 0 auto;
+      max-width: 1240px;
+      padding: 76px 24px;
+    }
+
+    .hero-copy {
+      max-width: 520px;
+    }
+
+    .eyebrow {
+      color: var(--cc-accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: .98;
+      margin: 0 0 18px;
+    }
+
+    .hero-copy p {
+      color: #454545;
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0 0 24px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      align-items: center;
+      border: 1px solid #222;
+      display: inline-flex;
+      font-size: 14px;
+      justify-content: center;
+      letter-spacing: .04em;
+      min-height: 44px;
+      padding: 0 18px;
+      text-transform: uppercase;
+    }
+
+    .button.primary {
+      background: #222;
+      color: #fff;
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,.78);
+      color: #222;
+    }
+
+    .section {
+      margin: 0 auto;
+      max-width: 1240px;
+      padding: 46px 24px;
+    }
+
+    .section-head {
+      align-items: end;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(25px, 3vw, 36px);
+      margin: 0;
+    }
+
+    .section-head p {
+      color: var(--cc-muted);
+      margin: 7px 0 0;
+      max-width: 680px;
+    }
+
+    .category-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .category-card {
+      border: 1px solid var(--cc-border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .category-card img {
+      aspect-ratio: 1 / 1;
+      display: block;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .category-card div {
+      padding: 14px;
+    }
+
+    .category-card h3 {
+      font-size: 17px;
+      margin: 0 0 5px;
+    }
+
+    .category-card p {
+      color: var(--cc-muted);
+      font-size: 13px;
+      line-height: 1.38;
+      margin: 0;
+    }
+
+    .comparison-band {
+      background: var(--cc-soft);
+      border-block: 1px solid var(--cc-border);
+    }
+
+    .comparison-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .comparison-item {
+      background: #fff;
+      border: 1px solid var(--cc-border);
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    .comparison-item .number {
+      color: var(--cc-accent);
+      display: block;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .comparison-item h3 {
+      font-size: 17px;
+      margin: 0 0 7px;
+    }
+
+    .comparison-item p {
+      color: var(--cc-muted);
+      font-size: 14px;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .mobile-drawer {
+      background: #fff;
+      border-top: 1px solid var(--cc-border);
+      display: none;
+      padding: 10px 24px 20px;
+    }
+
+    .mobile-drawer.is-open {
+      display: block;
+    }
+
+    .mobile-drawer details {
+      border-bottom: 1px solid var(--cc-border);
+    }
+
+    .mobile-drawer summary,
+    .mobile-drawer > a {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      list-style: none;
+      padding: 15px 0;
+      text-transform: uppercase;
+    }
+
+    .mobile-drawer ul {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0 0 15px 16px;
+    }
+
+    .mobile-drawer li a {
+      color: #333;
+      display: block;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    footer {
+      background: #242424;
+      color: #fff;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.74);
+      margin: 6px auto 0;
+      max-width: 780px;
+    }
+
+    @media (max-width: 1100px) {
+      .primary-nav { justify-content: flex-start; overflow-x: auto; }
+      .mega-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        grid-template-columns: auto 1fr auto;
+        padding: 13px 16px;
+      }
+
+      .mobile-toggle { display: inline-flex; }
+      .header-tools .icon-link,
+      .nav-wrap { display: none; }
+      .brand-logo { max-width: min(260px, 62vw); }
+      .header-actions .icon-link span { display: none; }
+
+      .hero {
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.88) 58%, rgba(255,255,255,.42) 100%),
+          url("https://confectioncouturestencils.com/cdn/shop/files/AdobeStock_540461086.jpg?v=1781615619&width=1000") center / cover no-repeat;
+        min-height: 420px;
+      }
+
+      .hero-inner { padding: 46px 18px; }
+      .hero-copy p { font-size: 16px; }
+      .section { padding: 34px 18px; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .category-grid,
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mockup-note">Navigation mockup based on the June 2026 review. Links point to proposed live destinations where available.</div>
+  <div class="announcement-bar">Free shipping on domestic orders over $75</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-tools">
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-toggle>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <a class="icon-link" href="https://confectioncouturestencils.com/search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16.4 16.4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Search</span>
+        </a>
+      </div>
+
+      <a class="brand-logo" href="https://confectioncouturestencils.com/" aria-label="Confection Couture Stencils home">
+        <img src="https://confectioncouturestencils.com/cdn/shop/files/CClogo_5_540x_3eea45b4-84d6-4c64-8660-6cb8b02a351b.png?v=1650387142&width=500" alt="Confection Couture Stencils">
+      </a>
+
+      <div class="header-actions">
+        <a class="icon-link" href="https://shopify.com/22529059/account">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Wholesale</span>
+        </a>
+        <a class="icon-link" href="https://confectioncouturestencils.com/cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h14l-2 8H8L6 4H3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span>Cart</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="nav-wrap" aria-label="Recommended navigation">
+      <div class="primary-nav">
+        <div class="nav-item">
+          <a class="nav-trigger" href="https://confectioncouturestencils.com/collections/cookie-stencils" data-menu-trigger>
+            Cookie Stencils
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="mega-panel">
+            <div class="mega-inner">
+              <div class="mega-feature">
+                <strong>Cookie Stencils</strong>
+                <p>Make the highest-performing parent collection a direct top-level link instead of hiding it inside the dropdown.</p>
+                <span class="evidence-pill">313 clicks / 10,547 impressions</span>
+              </div>
+              <div class="mega-column">
+                <h3>Shop Core</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/cookie-stencils">All Cookie Stencils <span class="metric">parent</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/apps/custom-stencil-designer">Custom Cookie Stencils <span class="metric">63 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/paint-your-own-cookie">PYO Cookie Stencils <span class="metric">32 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/alphabet-stencils">Alphabet & Numbers <span class="metric">11 clicks</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Occasions</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/graduation-cookie-stencils">Graduation <span class="metric">63 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/wedding-stencils">Wedding & Bridal Shower <span class="metric">45 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/baby-shower-stencils">Baby Shower <span class="metric">27 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/military-appreciation">Military & Armed Forces <span class="metric">16 clicks</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Seasonal & Hubs</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/4th-of-july-stencils">4th of July <span class="metric">10 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/memorial-day-cookie-stencils-and-cookie-cutters">Memorial Day <span class="metric">17 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/pages/seasonal-and-holiday-cookie-stencils">Seasonal Cookie Hub</a></li>
+                  <li><a href="https://confectioncouturestencils.com/pages/theme-cookie-stencils">Theme Cookie Hub</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-trigger" href="https://confectioncouturestencils.com/collections/cake-stencils" data-menu-trigger>
+            Cake Stencils
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="mega-panel">
+            <div class="mega-inner">
+              <div class="mega-feature">
+                <strong>Cake Stencils</strong>
+                <p>Make the parent cake collection clickable and promote proven cake subcategories.</p>
+                <span class="evidence-pill">156 clicks / 11,733 impressions</span>
+              </div>
+              <div class="mega-column">
+                <h3>Shop Core</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/cake-stencils">All Cake Stencils <span class="metric">parent</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/letter-and-number-cake-stencils">Letter & Number Cake Stencils <span class="metric">49 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/cake-stencils-by-designer-stencils">Designer Stencils <span class="metric">24 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/cake-confection-collection">Cake Stencil Sets</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Occasions</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/birthday-cake-stencils">Birthday Cake Stencils <span class="metric">28 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/graduation-cake-stencils">Graduation Cake Stencils <span class="metric">10 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/stencils-for-bridal-showers-and-wedding-cakes">Wedding & Bridal</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/baby-shower-cake-stencils">Baby Shower Cakes</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Patterns</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/lace-cake-stencils">Lace Cake Stencils <span class="metric">24 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/floral-and-plant-cake-stencils">Floral Cake Stencils</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/damask-cake-stencils">Damask Cake Stencils</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/valentines-day-cake-stencils">Seasonal Cake Stencils</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-trigger" href="https://confectioncouturestencils.com/apps/custom-stencil-designer" data-menu-trigger>
+            Custom Stencils
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="mega-panel">
+            <div class="mega-inner">
+              <div class="mega-feature">
+                <strong>Custom Stencils</strong>
+                <p>Send shoppers directly to the designer app, while keeping quote help available as the secondary path.</p>
+                <span class="evidence-pill">63 clicks / 1,867 impressions</span>
+              </div>
+              <div class="mega-column">
+                <h3>Start Here</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/apps/custom-stencil-designer">Custom Stencil Designer <span class="metric">primary</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/pages/custom-cookie-stencils">Quote Request</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/custom-monogram-and-message-cookie-stencils">Custom Monogram & Message</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Popular Uses</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/monogram-stencils">Monogram Cookie Stencils</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/monogram-letters-cookie-stencils">Monogram Alphabet</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/number-cookie-stencils">Number Cookie Stencils</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Workflow Note</h3>
+                <p>This replaces two duplicate links to the custom landing page with one direct app path and one support path.</p>
+                <a class="cta-link" href="https://confectioncouturestencils.com/apps/custom-stencil-designer">Open the designer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="nav-link" href="https://confectioncouturestencils.com/collections/barista-coffee-stencils">Drink & Dessert Stencils</a>
+
+        <div class="nav-item">
+          <a class="nav-trigger" href="https://confectioncouturestencils.com/collections/accessories" data-menu-trigger>
+            Tools & Accessories
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="mega-panel">
+            <div class="mega-inner">
+              <div class="mega-feature">
+                <strong>Tools & Accessories</strong>
+                <p>Keep the proven accessories hub and Stencil Genie visible; move narrow variants into the hub.</p>
+                <span class="evidence-pill">30 clicks / 4,413 impressions</span>
+              </div>
+              <div class="mega-column">
+                <h3>Core Tools</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/accessories">Cookie Decorating Accessories <span class="metric">30 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/the-stencil-genie">Stencil Genie Products <span class="metric">24 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/airgenie-airbrush-system">AirGenie Airbrush System</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/blocker-stencils">Blocker Tools</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Decorating Supplies</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/spatulas-and-scrapers">Icing Spatulas & Scrapers</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/colorants">Colorants, Dyes & Markers</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/storage">Cookie Stencil Storage</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/accessory-kits-for-cake-and-cookie-decorating">Accessory Kits</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Hub Strategy</h3>
+                <p>Narrow accessories stay discoverable from the accessories collection instead of occupying persistent menu rows.</p>
+                <a class="cta-link" href="https://confectioncouturestencils.com/collections/accessories">Browse tools hub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-trigger" href="https://confectioncouturestencils.com/collections/cookie-cutters" data-menu-trigger>
+            Cookie Cutters
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="mega-panel">
+            <div class="mega-inner">
+              <div class="mega-feature">
+                <strong>Cookie Cutters</strong>
+                <p>Keep the category for shoppers who expect it, but simplify the dropdown to the strongest child groups.</p>
+                <span class="evidence-pill">8 parent clicks; stronger child demand</span>
+              </div>
+              <div class="mega-column">
+                <h3>Shop Core</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/cookie-cutters">All Cookie Cutters</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/shape-cookie-cutters">Basic Shapes <span class="metric">10 clicks</span></a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/plaque-cookie-cutters">Plaque Style</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/cookie-cutters-by-julia-usher">Julia Usher Cutters</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Occasions</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/collections/wedding-cookie-cutters">Wedding Cookie Cutters</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/graduation-cookie-cutters">Graduation Cookie Cutters</a></li>
+                  <li><a href="https://confectioncouturestencils.com/collections/medical-and-first-responders-cookie-cutters">Medical & First Responders</a></li>
+                  <li><a href="https://confectioncouturestencils.com/pages/holiday-cookie-cutters">Seasonal Cookie Cutters</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Recommendation</h3>
+                <p>Remove duplicated Julia Usher cutter rows and broad "See More" rows from persistent navigation.</p>
+                <a class="cta-link" href="https://confectioncouturestencils.com/pages/cookie-cutters">View cutters hub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-trigger" href="https://confectioncouturestencils.com/pages/tips-and-tutorials-from-confection-couture" data-menu-trigger>
+            Learn
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="mega-panel">
+            <div class="mega-inner">
+              <div class="mega-feature">
+                <strong>Learn</strong>
+                <p>Combine Tips, Tutorials, and Recipes into one education entry because blog content has meaningful demand.</p>
+                <span class="evidence-pill">709 blog clicks / 122,471 impressions</span>
+              </div>
+              <div class="mega-column">
+                <h3>Education</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/pages/tips-and-tutorials-from-confection-couture">Tips & Tutorials</a></li>
+                  <li><a href="https://confectioncouturestencils.com/pages/recipes-from-confection-couture">Recipes</a></li>
+                  <li><a href="https://confectioncouturestencils.com/blogs/news">Blog</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Popular Guides</h3>
+                <ul class="mega-list">
+                  <li><a href="https://confectioncouturestencils.com/blogs/news/how-to-make-patriotic-usa-map-cookies-with-royal-icing">Patriotic Cookie Tutorial</a></li>
+                  <li><a href="https://confectioncouturestencils.com/blogs/news/fun-and-festive-diy-star-sprinkles-for-patriotic-treats">DIY Star Sprinkles</a></li>
+                  <li><a href="https://confectioncouturestencils.com/blogs/news/make-patriotic-cookies-for-the-4th-of-july">4th of July Cookies</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h3>Nav Cleanup</h3>
+                <p>This replaces two separate education links with one clearer resource area.</p>
+                <a class="cta-link" href="https://confectioncouturestencils.com/pages/tips-and-tutorials-from-confection-couture">Browse learning hub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-drawer" data-mobile-drawer>
+      <details>
+        <summary>Cookie Stencils</summary>
+        <ul>
+          <li><a href="https://confectioncouturestencils.com/collections/cookie-stencils">All Cookie Stencils</a></li>
+          <li><a href="https://confectioncouturestencils.com/apps/custom-stencil-designer">Custom Cookie Stencils</a></li>
+          <li><a href="https://confectioncouturestencils.com/collections/graduation-cookie-stencils">Graduation Cookie Stencils</a></li>
+          <li><a href="https://confectioncouturestencils.com/collections/wedding-stencils">Wedding Cookie Stencils</a></li>
+          <li><a href="https://confectioncouturestencils.com/pages/seasonal-and-holiday-cookie-stencils">Seasonal Cookie Hub</a></li>
+        </ul>
+      </details>
+      <details>
+        <summary>Cake Stencils</summary>
+        <ul>
+          <li><a href="https://confectioncouturestencils.com/collections/cake-stencils">All Cake Stencils</a></li>
+          <li><a href="https://confectioncouturestencils.com/collections/letter-and-number-cake-stencils">Letter & Number Cake Stencils</a></li>
+          <li><a href="https://confectioncouturestencils.com/collections/birthday-cake-stencils">Birthday Cake Stencils</a></li>
+          <li><a href="https://confectioncouturestencils.com/collections/lace-cake-stencils">Lace Cake Stencils</a></li>
+        </ul>
+      </details>
+      <a href="https://confectioncouturestencils.com/apps/custom-stencil-designer">Custom Stencils</a>
+      <a href="https://confectioncouturestencils.com/collections/barista-coffee-stencils">Drink & Dessert Stencils</a>
+      <a href="https://confectioncouturestencils.com/collections/accessories">Tools & Accessories</a>
+      <a href="https://confectioncouturestencils.com/collections/cookie-cutters">Cookie Cutters</a>
+      <a href="https://confectioncouturestencils.com/pages/tips-and-tutorials-from-confection-couture">Learn</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Proposed navigation</p>
+          <h1>Shop faster by stencil type, occasion, and project.</h1>
+          <p>This mockup shows a smaller, evidence-backed navigation using direct parent category links, focused submenus, and hubs for long-tail seasonal collections.</p>
+          <div class="button-row">
+            <a class="button primary" href="https://confectioncouturestencils.com/collections/cookie-stencils">Shop Cookie Stencils</a>
+            <a class="button secondary" href="https://confectioncouturestencils.com/collections/cake-stencils">Shop Cake Stencils</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Recommended top-level structure</h2>
+          <p>Seven product/resource entries replace the current larger persistent menu. Wholesale remains a utility link outside the SEO/product navigation.</p>
+        </div>
+      </div>
+      <div class="category-grid">
+        <a class="category-card" href="https://confectioncouturestencils.com/collections/cookie-stencils">
+          <img src="https://confectioncouturestencils.com/cdn/shop/files/SCU1297_COOKIEPS.jpg?v=1770904815&width=360" alt="Cookie stencil product">
+          <div><h3>Cookie Stencils</h3><p>Direct parent link plus proven occasion, PYO, alphabet, seasonal, and theme hub links.</p></div>
+        </a>
+        <a class="category-card" href="https://confectioncouturestencils.com/collections/cake-stencils">
+          <img src="https://confectioncouturestencils.com/cdn/shop/files/SCK0047_CAKE.jpg?v=1774900110&width=550" alt="Cake stencil product">
+          <div><h3>Cake Stencils</h3><p>Direct parent link with birthday, lace, letter, number, graduation, and pattern paths.</p></div>
+        </a>
+        <a class="category-card" href="https://confectioncouturestencils.com/apps/custom-stencil-designer">
+          <img src="https://confectioncouturestencils.com/cdn/shop/files/KSCU1228_COOKIEPS.jpg?v=1775064815&width=360" alt="Custom stencil kit">
+          <div><h3>Custom Stencils</h3><p>Primary call to the designer app, with quote/request information as support.</p></div>
+        </a>
+        <a class="category-card" href="https://confectioncouturestencils.com/collections/accessories">
+          <img src="https://cdn.shopify.com/s/files/1/2252/9059/files/CS1_160x160.jpg?v=1635256775" alt="Cookie decorating accessories">
+          <div><h3>Tools & Accessories</h3><p>Accessories and Stencil Genie stay prominent while narrow variants move to the hub.</p></div>
+        </a>
+      </div>
+    </section>
+
+    <div class="comparison-band">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>What changes in the navigation</h2>
+            <p>The review uses GSC demand as evidence, then preserves business-critical paths such as wholesale and custom workflows as exceptions.</p>
+          </div>
+        </div>
+        <div class="comparison-grid">
+          <div class="comparison-item">
+            <span class="number">7</span>
+            <h3>Top-level entries</h3>
+            <p>Cookie Stencils, Cake Stencils, Custom Stencils, Drink & Dessert, Tools & Accessories, Cookie Cutters, and Learn.</p>
+          </div>
+          <div class="comparison-item">
+            <span class="number">5-8</span>
+            <h3>Visible sublinks</h3>
+            <p>Major dropdowns show the strongest links first instead of exposing every collection in the persistent menu.</p>
+          </div>
+          <div class="comparison-item">
+            <span class="number">25</span>
+            <h3>Moved out of persistent nav</h3>
+            <p>No-data, duplicate, and narrow long-tail links move into hub pages, seasonal modules, or on-page collection browsing.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <strong>Confection Couture Stencils</strong>
+    <p>Mockup file for visual review only. It pulls live Shopify theme CSS/JS assets and uses proposed navigation based on the June 2026 review workbook.</p>
+  </footer>
+
+  <script src="https://confectioncouturestencils.com/cdn/shop/t/119/assets/global.js?v=57264273753028050421680207147" defer></script>
+  <script src="https://confectioncouturestencils.com/cdn/shop/t/119/compiled_assets/scripts.js?v=61936181921355174781746576759" defer></script>
+  <script>
+    (function () {
+      var items = Array.prototype.slice.call(document.querySelectorAll('.nav-item'));
+      var closeAll = function () {
+        items.forEach(function (item) { item.classList.remove('is-open'); });
+      };
+
+      items.forEach(function (item) {
+        var trigger = item.querySelector('[data-menu-trigger]');
+        if (!trigger) return;
+
+        item.addEventListener('mouseenter', function () {
+          closeAll();
+          item.classList.add('is-open');
+        });
+
+        item.addEventListener('mouseleave', function () {
+          item.classList.remove('is-open');
+        });
+
+        trigger.addEventListener('focus', function () {
+          closeAll();
+          item.classList.add('is-open');
+        });
+
+        trigger.addEventListener('click', function (event) {
+          if (window.matchMedia('(hover: none)').matches) {
+            event.preventDefault();
+            var isOpen = item.classList.contains('is-open');
+            closeAll();
+            item.classList.toggle('is-open', !isOpen);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeAll();
+      });
+
+      var toggle = document.querySelector('[data-mobile-toggle]');
+      var drawer = document.querySelector('[data-mobile-drawer]');
+      if (toggle && drawer) {
+        toggle.addEventListener('click', function () {
+          var next = !drawer.classList.contains('is-open');
+          drawer.classList.toggle('is-open', next);
+          toggle.setAttribute('aria-expanded', String(next));
+        });
+      }
+    }());
+  </script>
+</body>
+</html>
