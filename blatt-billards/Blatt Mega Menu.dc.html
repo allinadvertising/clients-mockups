@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0}
+    @keyframes megaFade{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+    a{text-decoration:none}
+    button{font:inherit}
+  </style>
+</helmet>
+<div style="min-height:760px;background:#080808;font-family:Arial,Helvetica,sans-serif;color:#fff;position:relative;overflow:hidden">
+
+  <div style="background:#c8a96b;color:#111;text-align:center;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase">Interactive navigation concept — enhanced mega menu</div>
+
+  <header data-navzone="1" onMouseLeave="{{ headerLeave }}" style="position:relative;z-index:40;background:rgba(7,7,7,.98);border-bottom:1px solid #292929">
+    <div style="max-width:1480px;height:38px;margin:auto;display:flex;align-items:center;justify-content:flex-end;gap:24px;padding:0 28px;color:#b9b6ae;font-size:12px">
+      <a href="#" style="color:inherit">New York · 212-674-8855</a>
+      <a href="#" style="color:inherit">Visit Our Showroom</a>
+      <a href="#" style="color:inherit">Services</a>
+    </div>
+
+    <div style="max-width:1480px;height:92px;margin:auto;display:grid;grid-template-columns:260px 1fr 180px;align-items:center;padding:0 28px;gap:24px">
+      <a href="#" style="display:block"><img src="https://blattbilliards.com/cdn/shop/files/Blatt_logo_gold_500x.png?v=1623281477" alt="Blatt Billiards" style="display:block;width:225px;height:auto;max-height:62px;object-fit:contain"></a>
+      <nav aria-label="Primary navigation" style="height:100%;display:flex;justify-content:center;align-items:stretch;gap:2px">
+        <sc-for list="{{ menus }}" as="menu" hint-placeholder-count="5">
+          <div onMouseEnter="{{ menu.onHover }}" style="display:flex;align-items:center;position:relative">
+            <button onClick="{{ menu.onOpen }}" aria-expanded="{{ menu.isActive }}" style="height:92px;display:flex;align-items:center;gap:8px;padding:0 15px;border:0;background:none;color:#fff;font-size:12px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;cursor:pointer;white-space:nowrap;position:relative" style-hover="color:#e0c58d">
+              <span style="{{ menu.labelStyle }}">{{ menu.label }}</span>
+              <i class="fa-solid fa-chevron-down" style="{{ menu.chevStyle }}"></i>
+              <span style="{{ menu.barStyle }}"></span>
+            </button>
+          </div>
+        </sc-for>
+      </nav>
+      <div style="display:flex;justify-content:flex-end;gap:20px;align-items:center">
+        <button aria-label="Search" style="background:none;border:0;color:#fff;font-size:18px;cursor:pointer" style-hover="color:#e0c58d"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="#" aria-label="Account" style="color:#fff;font-size:18px" style-hover="color:#e0c58d"><i class="fa-regular fa-user"></i></a>
+        <a href="#" aria-label="Cart" style="color:#fff;font-size:18px" style-hover="color:#e0c58d"><i class="fa-solid fa-bag-shopping"></i></a>
+      </div>
+    </div>
+
+    <sc-for list="{{ menus }}" as="menu" hint-placeholder-count="5">
+      <div data-navzone="1" style="{{ menu.panelStyle }}">
+        <div style="max-width:1480px;margin:auto;padding:40px 28px 44px;display:grid;grid-template-columns:1fr 340px;gap:48px">
+          <div style="display:grid;grid-template-columns:{{ menu.colTemplate }};gap:38px">
+            <sc-for list="{{ menu.columns }}" as="col" hint-placeholder-count="4">
+              <div style="display:flex;flex-direction:column;gap:26px">
+                <sc-for list="{{ col }}" as="group" hint-placeholder-count="1">
+                  <div>
+                    <h3 style="margin:0;color:#e0c58d;font:700 11px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.155em;text-transform:uppercase">{{ group.heading }}</h3>
+                    <div style="width:26px;height:2px;background:#c8a96b;margin:11px 0 14px;opacity:.9"></div>
+                    <div style="display:flex;flex-direction:column">
+                      <sc-for list="{{ group.links }}" as="link" hint-placeholder-count="4">
+                        <a href="{{ link.href }}" style="display:block;color:#d8d5ce;font-size:14px;line-height:1.45;padding:6px 0;transition:color .16s ease,transform .16s ease;will-change:transform" style-hover="color:#e0c58d;transform:translateX(5px)">{{ link.label }}</a>
+                      </sc-for>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ menu.hasFeatured }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ menu.featured.ctaHref }}" style="position:relative;display:block;overflow:hidden;border:1px solid #423722;background:#1c1914;min-height:300px" style-hover="border-color:#c8a96b">
+              <img src="{{ menu.featured.img }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.15) 0%,rgba(8,8,8,.55) 55%,rgba(6,6,6,.94) 100%)"></div>
+              <div style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:24px">
+                <span style="color:#e0c58d;font:700 10px/1 Arial;letter-spacing:.18em;text-transform:uppercase">{{ menu.featured.eyebrow }}</span>
+                <strong style="display:block;font-family:Georgia,serif;font-weight:400;font-size:23px;line-height:1.15;margin:12px 0 8px;color:#fff">{{ menu.featured.title }}</strong>
+                <p style="color:#c7c4bd;font-size:13px;line-height:1.55;margin:0 0 16px">{{ menu.featured.body }}</p>
+                <span style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid #c8a96b;color:#e0c58d;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .18s ease,color .18s ease" style-hover="background:#c8a96b;color:#111">{{ menu.featured.cta }} <i class="fa-solid fa-arrow-right" style="font-size:10px"></i></span>
+              </div>
+            </a>
+          </sc-if>
+        </div>
+      </div>
+    </sc-for>
+  </header>
+
+  <div style="{{ overlayStyle }}"></div>
+
+  <div style="max-width:1480px;margin:auto;padding:70px 28px;text-align:center;position:relative;z-index:1">
+    <div style="color:#6f6a60;font-size:12px;letter-spacing:.18em;text-transform:uppercase">Hover or click a category to open the menu</div>
+    <h2 style="font:400 40px/1.1 Georgia,serif;margin:14px 0 0;color:#f2efe8">Handcrafted in New York since 1923</h2>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1480,&quot;height&quot;:760},&quot;defaultMenu&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pool&quot;,&quot;cues&quot;,&quot;games&quot;,&quot;furniture&quot;,&quot;services&quot;],&quot;default&quot;:&quot;pool&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;showFeatured&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;openOnHover&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  state = { openMenu: undefined };
+
+  data = [
+    { id:'pool', label:'Pool Tables',
+      colTemplate:'1.15fr 1fr 1fr 1fr',
+      columns:[
+        [{heading:'Shop Pool Tables', links:[
+          {label:'All Pool Tables', href:'#'},
+          {label:'Custom Pool Tables', href:'#'},
+          {label:'Ready to Ship', href:'#'},
+          {label:'Used & Consignment', href:'#'},
+          {label:'Antique & Restored', href:'#'},
+        ]}],
+        [{heading:'By Type / Style', links:[
+          {label:'Modern Pool Tables', href:'#'},
+          {label:'Traditional & Classic', href:'#'},
+          {label:'Rustic / Industrial', href:'#'},
+          {label:'Outdoor Pool Tables', href:'#'},
+          {label:'Pool Dining Tables', href:'#'},
+          {label:'Marble Pool Tables', href:'#'},
+          {label:'Slate Pool Tables', href:'#'},
+        ]}],
+        [{heading:'By Size', links:[
+          {label:'7 Foot Pool Tables', href:'#'},
+          {label:'8 Foot Pool Tables', href:'#'},
+          {label:'9 Foot Pool Tables', href:'#'},
+          {label:'Regulation Sizes', href:'#'},
+        ]},
+        {heading:'By Budget', links:[
+          {label:'Affordable Pool Tables', href:'#'},
+        ]}],
+        [{heading:'By Brand', links:[
+          {label:'Brunswick', href:'#'},
+          {label:'Olhausen', href:'#'},
+          {label:'Presidential', href:'#'},
+          {label:'Imperial', href:'#'},
+        ]},
+        {heading:'Accessories & Parts', links:[
+          {label:'Felt & Cloth', href:'#'},
+          {label:'Pool Table Lights', href:'#'},
+          {label:'Covers, Pockets & Parts', href:'#'},
+        ]}],
+      ],
+      featured:{eyebrow:'Start here', title:'Find the right table for your room.', body:'Compare sizes, styles and budgets with expert guidance from Blatt.', cta:'Buying Guide', ctaHref:'#', img:'https://blattbilliards.com/cdn/shop/products/3882BellaireCircle_1512x.png?v=1617382283'} },
+
+    { id:'cues', label:'Cues & Accessories',
+      colTemplate:'1fr 1fr 1fr',
+      columns:[
+        [{heading:'Shop Cues', links:[
+          {label:'All Pool Cues', href:'#'},
+          {label:'Playing Cues', href:'#'},
+          {label:'Break & Jump Cues', href:'#'},
+        ]}],
+        [{heading:'Storage', links:[
+          {label:'Cue Cases', href:'#'},
+          {label:'Wall-Mounted Racks', href:'#'},
+          {label:'Floor-Standing Racks', href:'#'},
+        ]}],
+        [{heading:'Table Accessories', links:[
+          {label:'Pool Balls', href:'#'},
+          {label:'Ball Racks', href:'#'},
+          {label:'Chalk & Maintenance', href:'#'},
+        ]}],
+      ],
+      featured:{eyebrow:'Complete the set', title:'Complete your game room.', body:'Premium cues, cases, racks and the essentials that finish a table.', cta:'Shop Pool Cues', ctaHref:'#', img:'https://blattbilliards.com/cdn/shop/files/blattbilliardsBryantTable.jpg?v=1614759025'} },
+
+    { id:'games', label:'Game Tables',
+      colTemplate:'1fr 1fr 1fr 1fr 1fr',
+      columns:[
+        [{heading:'Game Tables', links:[{label:'All Game Tables', href:'#'}]}],
+        [{heading:'Shuffleboard', links:[{label:'Shop Shuffleboard', href:'#'}]}],
+        [{heading:'Foosball', links:[{label:'Shop Foosball', href:'#'}]}],
+        [{heading:'Ping Pong', links:[{label:'Shop Ping Pong', href:'#'},{label:'Conversion Tops', href:'#'}]}],
+        [{heading:'Air Hockey', links:[{label:'Shop Air Hockey', href:'#'}]}],
+      ],
+      featured:{eyebrow:'Beyond billiards', title:'Turn a room into a game room.', body:'Shuffleboard, foosball, ping pong and more, built to last.', cta:'Shop Game Tables', ctaHref:'#', img:'https://blattbilliards.com/cdn/shop/files/blattbilliardsastortable_9dddf8cd-0d2f-40c5-9816-b3198226d7de.jpg?v=1614759213'} },
+
+    { id:'furniture', label:'Furniture & Lighting',
+      colTemplate:'1fr 1fr 1fr',
+      columns:[
+        [{heading:'Seating', links:[
+          {label:'Benches', href:'#'},
+          {label:'Chairs & Spectator Chairs', href:'#'},
+          {label:'Stools & Barstools', href:'#'},
+        ]}],
+        [{heading:'Tables', links:[
+          {label:'Pub Tables', href:'#'},
+        ]}],
+        [{heading:'Lighting', links:[
+          {label:'All Pool Table Lights', href:'#'},
+          {label:'Custom Lights', href:'#'},
+          {label:'Production Lights', href:'#'},
+        ]}],
+      ],
+      featured:{eyebrow:'Finishing touches', title:'Finish the room.', body:'Lighting and furniture selected for serious game rooms.', cta:'Shop Lighting', ctaHref:'#', img:'https://blattbilliards.com/cdn/shop/products/3882BellaireCircle_1512x.png?v=1617382283'} },
+
+    { id:'services', label:'Services & Guides',
+      colTemplate:'1fr 1fr 1fr',
+      columns:[
+        [{heading:'Pool Table Services', links:[
+          {label:'Refelting & Cloth', href:'#'},
+          {label:'Installation & Re-leveling', href:'#'},
+          {label:'Pool Table Moving', href:'#'},
+          {label:'Pool Table Repair', href:'#'},
+          {label:'Rentals & Props', href:'#'},
+        ]}],
+        [{heading:'Guides', links:[
+          {label:'Buying Guide', href:'#'},
+          {label:'Room Size Guide', href:'#'},
+          {label:'Cost Guide', href:'#'},
+        ]}],
+        [{heading:'About Blatt', links:[
+          {label:'Our Story', href:'#'},
+          {label:'Contact & Showroom', href:'#'},
+        ]}],
+      ],
+      featured:{eyebrow:'Since 1923', title:'White-glove expertise.', body:'Installation, restoration and service from billiards specialists.', cta:'Request Service', ctaHref:'#', img:'https://blattbilliards.com/cdn/shop/files/blattbilliardsastortable_9dddf8cd-0d2f-40c5-9816-b3198226d7de.jpg?v=1614759213'} },
+  ];
+
+  setOpen(v){ this.setState({ openMenu: v }); }
+
+  onDocClick = (e) => {
+    if (!e.target.closest('[data-navzone]')) this.setOpen('');
+  };
+  onKey = (e) => { if (e.key === 'Escape') this.setOpen(''); };
+
+  componentDidMount(){
+    document.addEventListener('click', this.onDocClick);
+    document.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount(){
+    document.removeEventListener('click', this.onDocClick);
+    document.removeEventListener('keydown', this.onKey);
+  }
+
+  renderVals(){
+    const showFeatured = this.props.showFeatured ?? true;
+    const hoverOpen = this.props.openOnHover ?? true;
+    const defMenu = this.props.defaultMenu ?? 'pool';
+    const cur = this.state.openMenu === undefined ? defMenu : this.state.openMenu;
+
+    const basePanel = {
+      position:'absolute', left:0, right:0, top:'130px', zIndex:39,
+      background:'#111010',
+      borderTop:'1px solid rgba(200,169,107,.55)',
+      borderBottom:'1px solid #2a2419',
+      boxShadow:'0 26px 44px rgba(0,0,0,.5)',
+      transition:'opacity .2s ease, transform .2s ease, visibility .2s',
+    };
+
+    const menus = this.data.map(m => {
+      const isOpen = cur === m.id;
+      return {
+        ...m,
+        isActive: isOpen,
+        hasFeatured: showFeatured && !!m.featured,
+        labelStyle: isOpen ? 'color:#e0c58d;transition:color .16s ease' : 'transition:color .16s ease',
+        chevStyle: 'font-size:10px;transition:transform .2s ease,color .16s ease;'
+          + (isOpen ? 'transform:rotate(180deg);color:#e0c58d' : ''),
+        barStyle: 'position:absolute;left:15px;right:15px;bottom:0;height:2px;background:#c8a96b;'
+          + 'transform:scaleX(' + (isOpen ? 1 : 0) + ');transform-origin:left;transition:transform .22s ease',
+        onOpen: (e)=>{ if(e) e.stopPropagation(); this.setOpen(cur === m.id ? '' : m.id); },
+        onHover: hoverOpen ? ()=> this.setOpen(m.id) : undefined,
+        panelStyle: Object.assign({}, basePanel, isOpen
+          ? { opacity:1, visibility:'visible', transform:'none' }
+          : { opacity:0, visibility:'hidden', transform:'translateY(-10px)', pointerEvents:'none' }),
+      };
+    });
+
+    const anyOpen = menus.some(m => m.isActive);
+    return {
+      menus,
+      headerLeave: hoverOpen ? ()=> this.setOpen('') : undefined,
+      overlayStyle: {
+        position:'absolute', left:0, right:0, top:'260px', bottom:0, zIndex:30,
+        background:'rgba(4,4,4,.62)', backdropFilter:'blur(1px)',
+        opacity: anyOpen ? 1 : 0,
+        visibility: anyOpen ? 'visible' : 'hidden',
+        pointerEvents:'none',
+        transition:'opacity .25s ease, visibility .25s',
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
