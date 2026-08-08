@@ -11,3 +11,4 @@ Static hosting repo for All In Advertising client mockups.
 ## Current Mockups
 
 - Godfrey Group: `godfrey-group/godfrey-backlit-trade-show-displays-mockup.html`
+- Gygi: `gygi/gygi-mega-menu-mockup.html`
